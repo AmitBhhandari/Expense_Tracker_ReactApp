@@ -20,6 +20,7 @@ const ForgotPassword = () => {
             "Content-Type": "application/json",
           },
         }
+      
       );
       const data = await response.json();
       if (response.ok) {
@@ -30,17 +31,17 @@ const ForgotPassword = () => {
       }
     };
   return (
-      <Form onSubmit={forgotSubmitHandler}>
-        <label>Enter registered email</label>
-        <input
-          id="forgotEmailId"
-          type="text"
-          placeholder="Email"
-          ref={forgotEmailRef}
-        ></input>
-        <button>Send Link</button>
-        {!!successMessage && <h4>{successMessage}</h4>}
-      </Form>
+    <Form onSubmit={forgotSubmitHandler}>
+    <label>Enter registered email</label>
+    <input
+      id="forgotEmailId"
+      type="text"
+      placeholder="Email"
+      ref={forgotEmailRef}
+    ></input>
+    <button>Send Link</button>
+    {!!successMessage && <h4>{successMessage}</h4>}
+  </Form>
   );
 };
 
