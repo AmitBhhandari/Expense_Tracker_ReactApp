@@ -21,7 +21,7 @@ const IncompleteProfile = () => {
     const fullName = fullNameRef.current.value;
     const photoUrl = photoRef.current.value;
     const response = await fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBkbQXz7lJKNU-7T6SEpXkPqb22k2yINFg",
+      "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCGVOxqyp330Y7wKJV3wydwEois5B12vlA",
       {
         method: "POST",
         body: JSON.stringify({
@@ -50,7 +50,7 @@ const IncompleteProfile = () => {
   useEffect(() => {
     const fillInputsHandler = async () => {
       const response = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyBkbQXz7lJKNU-7T6SEpXkPqb22k2yINFg",
+        "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyCGVOxqyp330Y7wKJV3wydwEois5B12vlA",
         {
           method: "POST",
           body: JSON.stringify({

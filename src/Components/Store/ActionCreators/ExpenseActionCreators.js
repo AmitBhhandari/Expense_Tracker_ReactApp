@@ -5,7 +5,7 @@ export const getExpenseFetching = (email) => {
     const getExpenseFetching = async (email) => {
       try {
         const response = await fetch(
-          `https://expensetracker-f79f1-default-rtdb.firebaseio.com/expenses/${email}.json`,
+          `https://expensetracker-7c397-default-rtdb.firebaseio.com/expenses/${email}.json`,
           {
             method: "GET",
             headers: {
@@ -49,7 +49,7 @@ export const addExpenseFetching = (expense, email) => {
     const addExpenseFetching = async (expense, email) => {
       try {
         const response = await fetch(
-          `https://expensetracker-f79f1-default-rtdb.firebaseio.com/expenses/${email}.json`,
+          `https://expensetracker-7c397-default-rtdb.firebaseio.com/expenses/${email}.json`,
           {
             method: "POST",
             body: JSON.stringify({
@@ -78,7 +78,7 @@ export const editExpenseFetching = (expenseItem, email) => {
     const editExpenseFetching = async (expenseItem, email) => {
       try {
         const response = await fetch(
-          `https://expensetracker-f79f1-default-rtdb.firebaseio.com/expenses/${email}/${expenseItem.id}.json`,
+          `https://expensetracker-7c397-default-rtdb.firebaseio.com/expenses/${email}/${expenseItem.id}.json`,
           {
             method: "PUT",
             body: JSON.stringify({
@@ -107,7 +107,7 @@ export const deleteExpenseFetching = (id, email) => {
     const deleteExpenseFetching = async (id, email) => {
       try {
         const response = await fetch(
-          `https://expensetracker-f79f1-default-rtdb.firebaseio.com/expenses/${email}/${id}.json`,
+          `https://expensetracker-7c397-default-rtdb.firebaseio.com/expenses/${email}/${id}.json`,
           {
             method: "DELETE",
             headers: {

@@ -14,7 +14,7 @@ export const ExpenseContextProvider = (props) => {
     const getExpenseItem = async () => {
       try {
         const response = await fetch(
-          "https://expensetracker-f79f1-default-rtdb.firebaseio.com/expenses.json",
+          "https://expensetracker-7c397-default-rtdb.firebaseio.com/expenses.json",
           {
             method: "GET",
             headers: {
@@ -47,7 +47,7 @@ export const ExpenseContextProvider = (props) => {
     const deleteExpenseItem = async (id) => {
       try {
         const response = await fetch(
-          `https://expensetracker-f79f1-default-rtdb.firebaseio.com/expenses/${id}.json`,
+          `https://expensetracker-7c397-default-rtdb.firebaseio.com/expenses/${id}.json`,
           {
             method: "DELETE",
             headers: {
@@ -69,7 +69,7 @@ export const ExpenseContextProvider = (props) => {
     const editExpenseItem = async (expenseItem) => {
       try {
         const response = await fetch(
-          `https://expensetracker-f79f1-default-rtdb.firebaseio.com/expenses/${expenseItem.id}.json`,
+          `https://expensetracker-7c397-default-rtdb.firebaseio.com/expenses/${expenseItem.id}.json`,
           {
             method: "PUT",
             body: JSON.stringify({
